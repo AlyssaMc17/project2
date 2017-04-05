@@ -60,10 +60,9 @@ section {
 }
 
 nav ul{
-  visibility: hidden;
-  list-style: none;
-  text-align: center;
-  background-color: #000;
+   list-style: none;
+  text-align: left;
+  background-color: #A9A9A9;
 }
 
 </style>
