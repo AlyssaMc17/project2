@@ -49,6 +49,44 @@ p {
   margin: 0 0 0 3em;
 }
 
+.marker--after summary:after {
+  visibility: visible;
+  display: inline-block;
+  content: "[show]";
+  font-family: monospace;
+  color: #999;
+  margin-left: -.8em;
+  }
+
+.marker--after[open] summary:after {
+  content: "[hide]";
+  }
+
+.marker--after summary:hover:after,
+.marker--after summary:focus:after {
+  color: #000;
+  }
+
+/* add marker before / faux replacement marker */
+
+.marker--before summary:before {
+  visibility: visible;
+  float: left;
+  position: relative;
+  top: .11em;
+  content: "";
+  font-family: monospace;
+  padding-bottom: 3px;
+  padding-left: 1.5em;
+  border-top: 9px double #999;
+  border-bottom: 3px solid #999;
+  margin-right: .5em;
+  }
+
+.marker--before summary:hover:before,
+.marker--before summary:focus:before {
+  border-color: #000;
+  }
 
 
 	</head>
@@ -63,7 +101,9 @@ p {
 
 <h4><img src="https://cdn0.vox-cdn.com/thumbor/FL-nY0u-X7SXsToNo8MT0cWXbRM=/800x0/filters:no_upscale()/cdn0.vox-cdn.com/uploads/chorus_asset/file/6224493/overwatch_early_characters.0.jpg"></h4>
 
+<details class="marker-hide">
 <summary> <b>Content</b></summary>
+  <div class="details-content">
 <nav>
 
 <li><a href="#Heros">Heros</a><li>
@@ -71,6 +111,8 @@ p {
 <li><a href="#Gameplay">Gameplay</a><li>
 
 </nav>
+</div>
+</details>
 
 <section id="Heros">
 
